@@ -1,0 +1,21 @@
+{% extends "AppCoder3/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+{% endblock %}
+
+{% block descripcion %}
+    
+    <form action="" method="POST">{% csrf_token %}
+        
+        <p>¿Estás seguro que quieres eliminar a este cliente?</p>
+        <input type="submit" value="Confirmar">
+
+
+    </form>
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "AppCoder3/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Bienvenido a Detalles.com
+<hr>
+
+
+{% endblock %}
+
+{% block descripcion %}
+    <form action="" method="POST">{% csrf_token %}
+        {{form.as_p}}
+
+        <input type="submit" value="Enviar">
+
+
+    </form>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "AppCoder3/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Detalle del cliente:
+<hr>
+
+{% endblock %}
+
+{% block descripcion %}
+    
+    <p>Nombre:{{clientes1.nombre}} </p>
+    <p>Apellido:{{clientes1.apellido}} </p>
+    <p>Correo:{{clientes1.correo}} </p>
+
+    <a href="{% url 'ClientesLeer' %}">Regresar</a>
+
+{% endblock %}

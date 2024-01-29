@@ -1,0 +1,27 @@
+{% extends "AppCoder3/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Bienvenido a Detalles.com
+<hr>
+
+
+{% endblock %}
+
+{% block descripcion %}
+<p>Regístrate y encuentra productos increíbles</p>
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+        {{form1.as_table}}
+
+    </table>
+
+    <input type="Submit" value="Confirmar">
+</form>
+
+{% endblock %}

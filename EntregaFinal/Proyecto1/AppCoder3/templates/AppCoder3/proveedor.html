@@ -1,0 +1,27 @@
+{% extends "AppCoder3/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+<p> Registra tu empresa aquí:</p>
+<hr>
+
+
+{% endblock %}
+
+{% block descripcion %}
+<p>Regístrate y aumenta tus ventas!</p>
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+        {{form2.as_table}}
+
+    </table>
+
+    <input type="Submit" value="Confirmar">
+</form>
+
+{% endblock %}

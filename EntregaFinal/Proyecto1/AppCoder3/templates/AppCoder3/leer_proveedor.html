@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for prov in proveedor %}
+
+    <p>Empresa: {{prov.empresa}} </p>
+    <p>Nombre Representante Legal: {{prov.nombreRL}} {{prov.apellidoRL}} </p>
+    <p>Correo: {{prov.correo_empresa}} </p>
+
+    <button>
+        <a href="{% url 'EditarProveedor' prov.empresa %}"> Editar proveedor </a>
+    </button>
+    <button>
+        <a href="{% url 'EliminarProveedor' prov.empresa %}"> Eliminar proveedor </a>
+    </button>
+
+    <p></p>
+    ————————————————    
+    {% endfor %}
+
+    <br>
+    <a href="{% url 'ProveedorFormulario'  %}"> Crear proveedor </a>
+
+</body>
+</html>

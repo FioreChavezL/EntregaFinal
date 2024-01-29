@@ -1,0 +1,23 @@
+{% extends "AppCoder3/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Iniciar sesion
+
+{% endblock %}
+
+{% block descripcion %}
+
+<form action="" method="POST">{% csrf_token %}
+
+    {{formulario.as_p}}
+
+    <button type="submit"> Login </button>
+
+</form>
+
+{% endblock %}

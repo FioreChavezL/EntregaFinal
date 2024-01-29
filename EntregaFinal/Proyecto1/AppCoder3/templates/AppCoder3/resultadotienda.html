@@ -1,0 +1,26 @@
+{% extends "AppCoder3/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Tiendas
+<hr>
+
+
+{% endblock %}
+
+
+{% block descripcion %}
+
+    <p>La empresa {{empresa}} tiene las siguientes tiendas:</p>
+
+    {% for tienda in tienda %}
+
+        <p> - Tienda: {{tienda.tienda}} </p>
+
+    {% endfor %}
+
+{% endblock %}

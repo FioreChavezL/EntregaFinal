@@ -1,0 +1,31 @@
+{% extends "AppCoder3/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Registra tu tienda aquí
+<hr>
+
+
+{% endblock %}
+
+
+{% block descripcion %}
+
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+        {{form3.as_table}}
+
+    </table>
+
+    <input type="Submit" value="Confirmar">
+</form>
+
+<br>
+
+
+{% endblock %}

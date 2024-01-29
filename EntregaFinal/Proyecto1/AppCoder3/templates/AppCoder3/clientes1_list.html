@@ -1,0 +1,35 @@
+{% extends "AppCoder3/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Clientes
+
+<p style="font-size: medium;">Registra a tu cliente y le enviaremos tu catálogo actualizado siempre. 
+    Ayúdanos a tenerlos siempre actualizados.</p>
+<hr>
+
+
+{% endblock %}
+
+{% block descripcion %}
+    {% for clients in object_list %}
+
+    <p>Cliente: {{clients.nombre}} {{clients.apellido}} </p>
+
+    <a href="{% url 'ClientesDetalle' clients.id %}"> Ver cliente </a>    
+    |
+    <a href="{% url 'ClientesEditar' clients.id %}"> Editar cliente </a>
+    |
+    <a href="{% url 'ClientesBorrar' clients.id %}"> Eliminar cliente </a>
+    <br>
+    ————————————————    
+    {% endfor %}
+
+    <br>
+    <a href="{% url 'ClienteCrear' %}"> Crear cliente </a>
+
+{% endblock %}

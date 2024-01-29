@@ -1,0 +1,30 @@
+{% extends "AppCoder3/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+{{mensaje}}
+
+{% endblock %}
+
+{% block descripcion %}
+<p style="font-size:x-large;">Hola! Somos Detalles.com, una comunidad que espera concentrar a todos 
+    los emprendimientos y compartir detalles de clientes para aumentar tus 
+    ventas.
+    ¡Registrate y empieza a crecer!
+</p>
+
+<p>Busca tu tienda física aquí (solo coloca el nombre de tu empresa):</p>
+<form action="/AppCoder3/resultadostienda/" method="GET">
+
+    <input type="text" name="empresa" id="empresa">
+
+    <input type="submit" name="Buscar">
+
+
+</form>
+
+{% endblock %}
